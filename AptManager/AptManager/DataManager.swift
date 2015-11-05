@@ -35,7 +35,7 @@ class DataManager: NSObject {
                     newTicket.collectionName = uCollectionName
                 }
                 self.aptArray.append(newTicket)
-                print("Track Name:\(newTicket.trackName)")
+//                print("Track Name:\(newTicket.trackName)")
             }
             dispatch_async(dispatch_get_main_queue()) { // set listener
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "receivedDataFromServer", object: nil))
