@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55D434921BEBDA8700DE18C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434911BEBDA8700DE18C0 /* AppDelegate.swift */; };
+		55D434941BEBDA8700DE18C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434931BEBDA8700DE18C0 /* ViewController.swift */; };
+		55D434971BEBDA8700DE18C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D434951BEBDA8700DE18C0 /* Main.storyboard */; };
+		55D434991BEBDA8700DE18C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D434981BEBDA8700DE18C0 /* Assets.xcassets */; };
+		55D4349C1BEBDA8700DE18C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D4349A1BEBDA8700DE18C0 /* LaunchScreen.storyboard */; };
+		55D434AF1BEBDB6900DE18C0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434AB1BEBDB6900DE18C0 /* DataManager.swift */; };
+		55D434B01BEBDB6900DE18C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434AC1BEBDB6900DE18C0 /* NetworkManager.swift */; };
+		55D434B11BEBDB6900DE18C0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D434AE1BEBDB6900DE18C0 /* Reachability.m */; };
+		55D434B41BEBDDA400DE18C0 /* Apt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434B31BEBDDA400DE18C0 /* Apt.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55D4348E1BEBDA8700DE18C0 /* AptManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AptManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D434911BEBDA8700DE18C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55D434931BEBDA8700DE18C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55D434961BEBDA8700DE18C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55D434981BEBDA8700DE18C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55D4349B1BEBDA8700DE18C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55D4349D1BEBDA8700DE18C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D434A31BEBDB5300DE18C0 /* AptManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AptManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		55D434AB1BEBDB6900DE18C0 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		55D434AC1BEBDB6900DE18C0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		55D434AD1BEBDB6900DE18C0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		55D434AE1BEBDB6900DE18C0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		55D434B31BEBDDA400DE18C0 /* Apt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apt.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55D4348B1BEBDA8700DE18C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55D434851BEBDA8700DE18C0 = {
+			isa = PBXGroup;
+			children = (
+				55D434901BEBDA8700DE18C0 /* AptManager */,
+				55D4348F1BEBDA8700DE18C0 /* Products */,
+				55D434A31BEBDB5300DE18C0 /* AptManager-Bridging-Header.h */,
+			);
+			sourceTree = "<group>";
+		};
+		55D4348F1BEBDA8700DE18C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55D4348E1BEBDA8700DE18C0 /* AptManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55D434901BEBDA8700DE18C0 /* AptManager */ = {
+			isa = PBXGroup;
+			children = (
+				55D434911BEBDA8700DE18C0 /* AppDelegate.swift */,
+				55D434931BEBDA8700DE18C0 /* ViewController.swift */,
+				55D434B31BEBDDA400DE18C0 /* Apt.swift */,
+				55D434B21BEBDB7000DE18C0 /* Managers */,
+				55D434951BEBDA8700DE18C0 /* Main.storyboard */,
+				55D434981BEBDA8700DE18C0 /* Assets.xcassets */,
+				55D4349A1BEBDA8700DE18C0 /* LaunchScreen.storyboard */,
+				55D4349D1BEBDA8700DE18C0 /* Info.plist */,
+			);
+			path = AptManager;
+			sourceTree = "<group>";
+		};
+		55D434B21BEBDB7000DE18C0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				55D434AC1BEBDB6900DE18C0 /* NetworkManager.swift */,
+				55D434AB1BEBDB6900DE18C0 /* DataManager.swift */,
+				55D434AD1BEBDB6900DE18C0 /* Reachability.h */,
+				55D434AE1BEBDB6900DE18C0 /* Reachability.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55D4348D1BEBDA8700DE18C0 /* AptManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D434A01BEBDA8700DE18C0 /* Build configuration list for PBXNativeTarget "AptManager" */;
+			buildPhases = (
+				55D4348A1BEBDA8700DE18C0 /* Sources */,
+				55D4348B1BEBDA8700DE18C0 /* Frameworks */,
+				55D4348C1BEBDA8700DE18C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AptManager;
+			productName = AptManager;
+			productReference = 55D4348E1BEBDA8700DE18C0 /* AptManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55D434861BEBDA8700DE18C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Mike Henry";
+				TargetAttributes = {
+					55D4348D1BEBDA8700DE18C0 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 55D434891BEBDA8700DE18C0 /* Build configuration list for PBXProject "AptManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55D434851BEBDA8700DE18C0;
+			productRefGroup = 55D4348F1BEBDA8700DE18C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55D4348D1BEBDA8700DE18C0 /* AptManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55D4348C1BEBDA8700DE18C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D4349C1BEBDA8700DE18C0 /* LaunchScreen.storyboard in Resources */,
+				55D434991BEBDA8700DE18C0 /* Assets.xcassets in Resources */,
+				55D434971BEBDA8700DE18C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55D4348A1BEBDA8700DE18C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D434B01BEBDB6900DE18C0 /* NetworkManager.swift in Sources */,
+				55D434B41BEBDDA400DE18C0 /* Apt.swift in Sources */,
+				55D434941BEBDA8700DE18C0 /* ViewController.swift in Sources */,
+				55D434AF1BEBDB6900DE18C0 /* DataManager.swift in Sources */,
+				55D434921BEBDA8700DE18C0 /* AppDelegate.swift in Sources */,
+				55D434B11BEBDB6900DE18C0 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		55D434951BEBDA8700DE18C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D434961BEBDA8700DE18C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55D4349A1BEBDA8700DE18C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D4349B1BEBDA8700DE18C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55D4349E1BEBDA8700DE18C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55D4349F1BEBDA8700DE18C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55D434A11BEBDA8700DE18C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = AptManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrymike.AptManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AptManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55D434A21BEBDA8700DE18C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = AptManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.henrymike.AptManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AptManager-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55D434891BEBDA8700DE18C0 /* Build configuration list for PBXProject "AptManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D4349E1BEBDA8700DE18C0 /* Debug */,
+				55D4349F1BEBDA8700DE18C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D434A01BEBDA8700DE18C0 /* Build configuration list for PBXNativeTarget "AptManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D434A11BEBDA8700DE18C0 /* Debug */,
+				55D434A21BEBDA8700DE18C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55D434861BEBDA8700DE18C0 /* Project object */;
+}
