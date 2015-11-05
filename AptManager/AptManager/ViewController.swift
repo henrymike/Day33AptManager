@@ -31,8 +31,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TicketTableViewCell
         let currentTicket = dataManager.aptArray[indexPath.row]
-        cell.testLabel.text = "Now You See Me"
-        cell.test2Label.text = "Now You Don't"
+        cell.testLabel.text = currentTicket.artistName
+        cell.test2Label.text = currentTicket.trackName
         
 //        cell.textLabel!.text = "Test"
         
@@ -45,7 +45,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else {
             currentRow = indexPath.row
         }
-        print(currentRow)
         tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     
@@ -53,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if indexPath.row == currentRow {
             return 150
         } else {
-            return 70
+            return 55
         }
     }
     
