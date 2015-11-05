@@ -10,10 +10,11 @@ import UIKit
 
 class Apt: NSObject {
     
-    var artistName :String!
-    var artworkUrl100 :String!
-    var collectionName :String!
-    var trackName :String!
-    var previewURL :String!
+    var name :String!
+    var created_at :NSDate!
+    var completed :Bool!
+    var first_name :String!
+    var last_name :String!
+    var aptnum :String!
 
 }

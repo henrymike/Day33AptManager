@@ -24,15 +24,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(dataManager.aptArray.count)
+//        print(dataManager.aptArray.count)
         return dataManager.aptArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TicketTableViewCell
         let currentTicket = dataManager.aptArray[indexPath.row]
-        cell.testLabel.text = currentTicket.artistName
-        cell.test2Label.text = currentTicket.trackName
+        cell.testLabel.text = currentTicket.name
+//        cell.test2Label.text = currentTicket.trackName
         
 //        cell.textLabel!.text = "Test"
         
