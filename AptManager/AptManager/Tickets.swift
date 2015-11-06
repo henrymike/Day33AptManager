@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Apt: NSObject {
+class Tickets: NSObject {
     
     var name :String!
     var created_at :String!

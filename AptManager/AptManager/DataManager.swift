@@ -16,28 +16,28 @@ class DataManager: NSObject {
     
 //    var baseURLString = "6f55349a.ngrok.io"
     var baseURLString = "boiling-ocean-2286.herokuapp.com"
-    var aptArray = [Apt]()
+    var ticketsArray = [Tickets]()
 
     
     //MARK: - Get Data Methods
     
-    func parseAptData(data: NSData) {
+    func parseTicketsData(data: NSData) {
         do {
             let jsonResult = try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
             let tempDictArray = jsonResult.objectForKey("repairs") as! [NSDictionary]
-            self.aptArray.removeAll()
-            for aptDict in tempDictArray {
-                let newTicket = Apt()
-                newTicket.name = aptDict.objectForKey("name") as! String
-                newTicket.id = aptDict.objectForKey("id") as! Int
-                newTicket.repair_description = aptDict.objectForKey("repair_description") as! String
-                newTicket.created_at = aptDict.objectForKey("created_at") as! String
-                newTicket.completed = aptDict.objectForKey("completed") as! Bool
-                newTicket.first_name = aptDict.objectForKey("first_name") as! String
-                newTicket.last_name = aptDict.objectForKey("last_name") as! String
-                newTicket.aptnum = aptDict.objectForKey("aptnum") as! String
+            self.ticketsArray.removeAll()
+            for ticketsDict in tempDictArray {
+                let newTicket = Tickets()
+                newTicket.name = ticketsDict.objectForKey("name") as! String
+                newTicket.id = ticketsDict.objectForKey("id") as! Int
+                newTicket.repair_description = ticketsDict.objectForKey("repair_description") as! String
+                newTicket.created_at = ticketsDict.objectForKey("created_at") as! String
+                newTicket.completed = ticketsDict.objectForKey("completed") as! Bool
+                newTicket.first_name = ticketsDict.objectForKey("first_name") as! String
+                newTicket.last_name = ticketsDict.objectForKey("last_name") as! String
+                newTicket.aptnum = ticketsDict.objectForKey("aptnum") as! String
                 
-                self.aptArray.append(newTicket)
+                self.ticketsArray.append(newTicket)
 //                print("Repair:\(newTicket.name)")
             }
             dispatch_async(dispatch_get_main_queue()) { // set listener
@@ -64,7 +64,7 @@ class DataManager: NSObject {
         let task = urlSession.dataTaskWithRequest(urlRequest) { (data, response, error) -> Void in
             if data != nil {
                 print("Got Data")
-                self.parseAptData(data!)
+                self.parseTicketsData(data!)
 //                print("Data\(data)")
             } else {
                 print("No Data")

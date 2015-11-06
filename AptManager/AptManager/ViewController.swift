@@ -27,24 +27,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let point = sender.convertPoint(CGPointZero, toView: ticketTableView)
         let indexPath = ticketTableView.indexPathForRowAtPoint(point)
         
-        let currentTicket = dataManager.aptArray[indexPath!.row]
+        let currentTicket = dataManager.ticketsArray[indexPath!.row]
         let repairID = currentTicket.id
         let repairCompleted = "completed=\(sender.on)"
         print("RepairID: \(repairID) & Completed:\(repairCompleted)")
         dataManager.sendDataToServer(repairID, repairCompleted: repairCompleted)
+        //TODO: Disable the Completed switch so that it can never be reset to False
     }
+    
     
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataManager.aptArray.count
+        return dataManager.ticketsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TicketTableViewCell
-        let currentTicket = dataManager.aptArray[indexPath.row]
+        let currentTicket = dataManager.ticketsArray[indexPath.row]
         cell.repairLabel.text = currentTicket.name
         cell.aptNumLabel.text = "Apt#: \(currentTicket.aptnum)"
+        cell.userNameLabel.text = "\(currentTicket.first_name) \(currentTicket.last_name)"
         cell.completedSwitch.on = currentTicket.completed
         cell.descriptionTextView.text = currentTicket.repair_description
         

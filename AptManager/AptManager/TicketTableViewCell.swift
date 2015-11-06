@@ -15,6 +15,7 @@ class TicketTableViewCell: UITableViewCell {
     @IBOutlet weak var repairLabel          :UILabel!
     @IBOutlet weak var dateLabel            :UILabel!
     @IBOutlet weak var aptNumLabel          :UILabel!
+    @IBOutlet weak var userNameLabel        :UILabel!
     @IBOutlet weak var completedSwitch      :UISwitch!
     @IBOutlet weak var descriptionTextView  :UITextView!
 
