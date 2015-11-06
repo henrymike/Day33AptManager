@@ -15,16 +15,19 @@ class EmailViewController: UIViewController {
     @IBOutlet weak var messageTextView  :UITextView!
     @IBOutlet weak var sendButton       :UIButton!
     
+    var dataManager = DataManager.sharedInstance
+    
     
     //MARK: - Interactivity Methods
     
     @IBAction func sendButtonPressed(sender: UIButton) {
         print("subject=\(subjectTextField.text!) & body=\(messageTextView.text)")
+        let messageString = "subject=\(subjectTextField.text!) & body=\(messageTextView.text)"
+        dataManager.sendEmaiToServer(messageString)
     }
-    //controllers/mailers/user_mailer <-sender
+
     
     //MARK: - Life Cycle Methods
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

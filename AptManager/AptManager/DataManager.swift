@@ -73,7 +73,7 @@ class DataManager: NSObject {
         task.resume()
     }
     
-    func sendDataToServer(repairID: Int, repairCompleted: String) {
+    func sendDataToServer(repairID: String, repairCompleted: String) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         defer {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
@@ -85,7 +85,6 @@ class DataManager: NSObject {
         let token = "TIY"
         urlRequest.addValue("bearer \(token)", forHTTPHeaderField: "Authorization")
         urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-//                let postString = "email=sample@email.com & phrase=blah blah blah"
         let postString = repairCompleted
         let postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
         urlRequest.HTTPBody = postData
@@ -100,5 +99,31 @@ class DataManager: NSObject {
         }
         task.resume()
     }
-    //api/repairs/
+    
+    func sendEmaiToServer(emailString: String) {
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        defer {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        }
+        let url = NSURL(string: "http://\(baseURLString)/controllers/mailers/user_mailer")
+        let urlRequest = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 30.0)
+        
+        urlRequest.HTTPMethod = "POST"
+        let token = "TIY"
+        urlRequest.addValue("bearer \(token)", forHTTPHeaderField: "Authorization")
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        let postString = emailString
+        let postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlRequest.HTTPBody = postData
+        
+        let urlSession = NSURLSession.sharedSession()
+        let task = urlSession.dataTaskWithRequest(urlRequest) { (data, response, error) -> Void in
+            if data != nil {
+                print("Data Sent Success")
+            } else {
+                print("Data Sent Failed")
+            }
+        }
+        task.resume()
+    }
 }
