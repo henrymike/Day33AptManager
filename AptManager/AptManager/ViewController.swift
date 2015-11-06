@@ -53,15 +53,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let dateFormatter = NSDateFormatter()
 //        print("Sent:\(currentTicket.created_at)")
-
-//        dateFormatter.dateStyle = .ShortStyle
-//        dateFormatter.timeStyle = .ShortStyle
-        
 //        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT-5")
-//        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:s.SZZZZ"
         cell.dateLabel.text = String(dateFormatter.dateFromString(currentTicket.created_at)!)
-
 //        print("Conv:\(cell.dateLabel.text!)")
 
         return cell
