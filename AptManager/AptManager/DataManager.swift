@@ -73,33 +73,32 @@ class DataManager: NSObject {
         task.resume()
     }
     
-    func sendDataToServer() {
+    func sendDataToServer(repairID: Int, repairCompleted: String) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         defer {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         }
-        let url = NSURL(string: "http://\(baseURLString)/api/repairs/")
+        let url = NSURL(string: "http://\(baseURLString)/api/repairs/\(repairID)")
         let urlRequest = NSMutableURLRequest(URL: url!, cachePolicy: .ReloadIgnoringLocalCacheData, timeoutInterval: 30.0)
         
-        urlRequest.HTTPMethod = "PUT"
+        urlRequest.HTTPMethod = "PATCH"
         let token = "TIY"
         urlRequest.addValue("bearer \(token)", forHTTPHeaderField: "Authorization")
         urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-                let postString = "email=sample@email.com & phrase=blah blah blah"
-                let postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
-                urlRequest.HTTPBody = postData
+//                let postString = "email=sample@email.com & phrase=blah blah blah"
+        let postString = repairCompleted
+        let postData = postString.dataUsingEncoding(NSUTF8StringEncoding)
+        urlRequest.HTTPBody = postData
         
         let urlSession = NSURLSession.sharedSession()
         let task = urlSession.dataTaskWithRequest(urlRequest) { (data, response, error) -> Void in
             if data != nil {
-                print("Got Data")
-                self.parseAptData(data!)
-//                print("Data\(data)")
+                print("Data Sent Success")
             } else {
-                print("No Data")
+                print("Data Sent Failed")
             }
         }
         task.resume()
     }
-    
+    //api/repairs/
 }

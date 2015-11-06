@@ -28,7 +28,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let indexPath = ticketTableView.indexPathForRowAtPoint(point)
         
         let currentTicket = dataManager.aptArray[indexPath!.row]
-        print("id=\(currentTicket.id) & completed=\(sender.on)")
+        let repairID = currentTicket.id
+        let repairCompleted = "completed=\(sender.on)"
+        print("RepairID: \(repairID) & Completed:\(repairCompleted)")
+        dataManager.sendDataToServer(repairID, repairCompleted: repairCompleted)
     }
     
     //MARK: - Table View Methods
