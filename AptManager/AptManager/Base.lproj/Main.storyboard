@@ -143,6 +143,7 @@
                                             <outlet property="aptNumLabel" destination="6BB-bd-oIm" id="Zmw-yS-T0A"/>
                                             <outlet property="completedSwitch" destination="yA9-q7-frB" id="I24-y3-n1W"/>
                                             <outlet property="dateLabel" destination="CCh-IZ-w9T" id="S68-oA-Tmf"/>
+                                            <outlet property="descriptionTextView" destination="0hw-4N-saM" id="dif-h5-zB5"/>
                                             <outlet property="repairLabel" destination="1Ub-Dl-HzQ" id="Tus-LP-kgq"/>
                                         </connections>
                                     </tableViewCell>

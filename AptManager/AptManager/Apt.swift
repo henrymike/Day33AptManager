@@ -12,8 +12,8 @@ class Apt: NSObject {
     
     var name :String!
     var created_at :String!
-    var id :Int64!
-//    var description :String!
+    var id :Int!
+    var repair_description :String!
 //    var createdDate :NSDate!
     var completed :Bool!
     var first_name :String!

@@ -19,9 +19,9 @@ class EmailViewController: UIViewController {
     //MARK: - Interactivity Methods
     
     @IBAction func sendButtonPressed(sender: UIButton) {
-        print("subject=\(subjectTextField.text!) & message=\(messageTextView.text)")
+        print("subject=\(subjectTextField.text!) & body=\(messageTextView.text)")
     }
-    
+    //controllers/mailers/user_mailer <-sender
     
     //MARK: - Life Cycle Methods
     

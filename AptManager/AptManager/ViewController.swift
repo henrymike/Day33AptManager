@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let indexPath = ticketTableView.indexPathForRowAtPoint(point)
         
         let currentTicket = dataManager.aptArray[indexPath!.row]
-        print("id=\(currentTicket.aptnum) & completed=\(sender.on)")
+        print("id=\(currentTicket.id) & completed=\(sender.on)")
     }
     
     //MARK: - Table View Methods
@@ -43,6 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.repairLabel.text = currentTicket.name
         cell.aptNumLabel.text = "Apt#: \(currentTicket.aptnum)"
         cell.completedSwitch.on = currentTicket.completed
+        cell.descriptionTextView.text = currentTicket.repair_description
         
         let dateFormatter = NSDateFormatter()
 //        print("Sent:\(currentTicket.created_at)")

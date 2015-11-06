@@ -28,7 +28,9 @@ class DataManager: NSObject {
             self.aptArray.removeAll()
             for aptDict in tempDictArray {
                 let newTicket = Apt()
-//                newTicket.name = aptDict.objectForKey("name") as! String
+                newTicket.name = aptDict.objectForKey("name") as! String
+                newTicket.id = aptDict.objectForKey("id") as! Int
+                newTicket.repair_description = aptDict.objectForKey("repair_description") as! String
                 newTicket.created_at = aptDict.objectForKey("created_at") as! String
                 newTicket.completed = aptDict.objectForKey("completed") as! Bool
                 newTicket.first_name = aptDict.objectForKey("first_name") as! String
