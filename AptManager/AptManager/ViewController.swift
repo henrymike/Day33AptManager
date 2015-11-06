@@ -21,21 +21,42 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var currentRow = -1
     
     
+    //MARK: - Interactivity Methods
+    
+    @IBAction func completedSwitchChanged(sender: UISwitch) {
+        let point = sender.convertPoint(CGPointZero, toView: ticketTableView)
+        let indexPath = ticketTableView.indexPathForRowAtPoint(point)
+        
+        let currentTicket = dataManager.aptArray[indexPath!.row]
+        print("id=\(currentTicket.aptnum) & completed=\(sender.on)")
+    }
+    
     //MARK: - Table View Methods
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print(dataManager.aptArray.count)
         return dataManager.aptArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! TicketTableViewCell
         let currentTicket = dataManager.aptArray[indexPath.row]
-        cell.testLabel.text = currentTicket.name
-//        cell.test2Label.text = currentTicket.trackName
+        cell.repairLabel.text = currentTicket.name
+        cell.aptNumLabel.text = "Apt#: \(currentTicket.aptnum)"
+        cell.completedSwitch.on = currentTicket.completed
         
-//        cell.textLabel!.text = "Test"
+        let dateFormatter = NSDateFormatter()
+//        print("Sent:\(currentTicket.created_at)")
+
+//        dateFormatter.dateStyle = .ShortStyle
+//        dateFormatter.timeStyle = .ShortStyle
         
+//        dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT-5")
+//        dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:s.SZZZZ"
+        cell.dateLabel.text = String(dateFormatter.dateFromString(currentTicket.created_at)!)
+
+//        print("Conv:\(cell.dateLabel.text!)")
+
         return cell
     }
     
@@ -56,7 +77,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-
     func newDataReceived() {
         print("New Data Received")
         ticketTableView.reloadData()

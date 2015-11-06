@@ -17,6 +17,7 @@
 		55D434B11BEBDB6900DE18C0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D434AE1BEBDB6900DE18C0 /* Reachability.m */; };
 		55D434B41BEBDDA400DE18C0 /* Apt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D434B31BEBDDA400DE18C0 /* Apt.swift */; };
 		55DDC8E61BEBECBC00E9DE69 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDC8E51BEBECBC00E9DE69 /* TicketTableViewCell.swift */; };
+		55DDC8E81BED385A00E9DE69 /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DDC8E71BED385A00E9DE69 /* EmailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		55D434AE1BEBDB6900DE18C0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		55D434B31BEBDDA400DE18C0 /* Apt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apt.swift; sourceTree = "<group>"; };
 		55DDC8E51BEBECBC00E9DE69 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		55DDC8E71BED385A00E9DE69 /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				55D434911BEBDA8700DE18C0 /* AppDelegate.swift */,
 				55D434931BEBDA8700DE18C0 /* ViewController.swift */,
+				55DDC8E71BED385A00E9DE69 /* EmailViewController.swift */,
 				55DDC8E51BEBECBC00E9DE69 /* TicketTableViewCell.swift */,
 				55D434B31BEBDDA400DE18C0 /* Apt.swift */,
 				55D434B21BEBDB7000DE18C0 /* Managers */,
@@ -165,6 +168,7 @@
 				55DDC8E61BEBECBC00E9DE69 /* TicketTableViewCell.swift in Sources */,
 				55D434B01BEBDB6900DE18C0 /* NetworkManager.swift in Sources */,
 				55D434B41BEBDDA400DE18C0 /* Apt.swift in Sources */,
+				55DDC8E81BED385A00E9DE69 /* EmailViewController.swift in Sources */,
 				55D434941BEBDA8700DE18C0 /* ViewController.swift in Sources */,
 				55D434AF1BEBDB6900DE18C0 /* DataManager.swift in Sources */,
 				55D434921BEBDA8700DE18C0 /* AppDelegate.swift in Sources */,

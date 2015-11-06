@@ -12,11 +12,12 @@ class TicketTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     
-    @IBOutlet weak var testLabel        :UILabel!
-    @IBOutlet weak var test2Label       :UILabel!
+    @IBOutlet weak var repairLabel      :UILabel!
+    @IBOutlet weak var dateLabel        :UILabel!
+    @IBOutlet weak var aptNumLabel      :UILabel!
+    @IBOutlet weak var completedSwitch  :UISwitch!
 
     
-
     //MARK: - Life Cycle Methods
     
     override func awakeFromNib() {

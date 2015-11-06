@@ -11,7 +11,10 @@ import UIKit
 class Apt: NSObject {
     
     var name :String!
-    var created_at :NSDate!
+    var created_at :String!
+    var id :Int64!
+//    var description :String!
+//    var createdDate :NSDate!
     var completed :Bool!
     var first_name :String!
     var last_name :String!
