@@ -180,6 +180,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🏢 AptManager" id="9eq-n6-0xr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="tgd-AW-H0H">
+                            <connections>
+                                <action selector="getNewData:" destination="BYZ-38-t0r" id="Opo-gp-eoE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="✉️" id="X1H-mv-f1E">
                             <connections>
                                 <segue destination="tKq-2R-XEr" kind="show" id="n8H-cq-4qP"/>

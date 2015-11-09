@@ -84,6 +84,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         ticketTableView.reloadData()
     }
     
+    @IBAction func getNewData(sender: UIBarButtonItem) {
+        dataManager.getDataFromServer()
+    }
+    
     
     //MARK: - Life Cycle Methods
     
